@@ -13,7 +13,10 @@ Source:     http://www.cpan.org/modules/by-module/App/%{realname}-%{version}.tar
 Url:        http://search.cpan.org/dist/%{realname}
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: perl-devel
+BuildRequires: perl(Clipboard)
+BuildRequires: perl(Config::INI::Reader)
 BuildRequires: perl(ExtUtils::MakeMaker)
+BuildRequires: perl(Git)
 BuildRequires: perl(Module::Pluggable)
 BuildRequires: perl(Moose)
 BuildRequires: perl(MooseX::Getopt)
@@ -41,7 +44,7 @@ one.
 %setup -q -n %{realname}-%{version} 
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+yes no | %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
