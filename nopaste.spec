@@ -22,6 +22,8 @@ BuildRequires: perl(Moose)
 BuildRequires: perl(MooseX::Getopt)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(WWW::Mechanize)
+BuildRequires: perl(WWW::Pastebin::PastebinCom::Create)
+BuildRequires: perl(WWW::Pastebin::RafbNet::Create)
 
 BuildArch: noarch
 
@@ -44,7 +46,7 @@ one.
 %setup -q -n %{realname}-%{version} 
 
 %build
-yes no | %{__perl} Makefile.PL INSTALLDIRS=vendor
+%{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
