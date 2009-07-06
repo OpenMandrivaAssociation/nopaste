@@ -1,18 +1,16 @@
-
-%define realname   App-Nopaste
-%define version    0.10
-%define release    %mkrel 1
+%define upstream_name    App-Nopaste
+%define upstream_version 0.11
 
 Name:       nopaste
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    easy access to any pastebin
+License:    GPL+ or Artistic
 Group:      Development/Perl
-Summary:    Http://pastebin.com/
-Source:     http://www.cpan.org/modules/by-module/App/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
+Source0:    http://www.cpan.org/modules/by-module/App/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        http://search.cpan.org/dist/%{upstream_name}
+
 BuildRequires: perl(Clipboard)
 BuildRequires: perl(Config::INI::Reader)
 BuildRequires: perl(ExtUtils::MakeMaker)
@@ -24,7 +22,7 @@ BuildRequires: perl(Test::More)
 BuildRequires: perl(WWW::Mechanize)
 BuildRequires: perl(WWW::Pastebin::PastebinCom::Create)
 BuildRequires: perl(WWW::Pastebin::RafbNet::Create)
-
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 BuildArch: noarch
 
 %description
@@ -43,7 +41,7 @@ provides redundancy: if one site doesn't work, it just tries a different
 one.
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version} 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
