@@ -3,7 +3,7 @@
 
 Name:       nopaste
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:    easy access to any pastebin
 License:    GPL+ or Artistic
@@ -25,6 +25,8 @@ BuildRequires: perl(WWW::Pastebin::RafbNet::Create)
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 BuildArch: noarch
 
+Requires: perl(MooseX::Getopt)
+
 %description
 Pastebins (also known as nopaste sites) let you post text, usually code,
 for public viewing. They're used a lot in IRC channels to show code that
@@ -41,7 +43,7 @@ provides redundancy: if one site doesn't work, it just tries a different
 one.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -64,4 +66,3 @@ rm -rf %buildroot
 %perl_vendorlib/*
 /usr/bin/nopaste
 /usr/share/man/man1/nopaste.1.lzma
-
