@@ -1,5 +1,5 @@
 %define upstream_name    App-Nopaste
-%define upstream_version 0.18
+%define upstream_version 0.19
 
 Name:       nopaste
 Version:    %perl_convert_version %{upstream_version}
@@ -22,8 +22,9 @@ BuildRequires: perl(Test::More)
 BuildRequires: perl(WWW::Mechanize)
 BuildRequires: perl(WWW::Pastebin::PastebinCom::Create)
 BuildRequires: perl(WWW::Pastebin::RafbNet::Create)
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+
 BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 Requires: perl(MooseX::Getopt)
 
@@ -50,7 +51,7 @@ one.
 %make
 
 %check
-make test
+%make test
 
 %install
 rm -rf %buildroot
