@@ -1,5 +1,5 @@
 %define upstream_name    App-Nopaste
-%define upstream_version 0.19
+%define upstream_version 0.20
 
 Name:       nopaste
 Version:    %perl_convert_version %{upstream_version}
