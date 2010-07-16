@@ -3,7 +3,7 @@
 
 Name:       nopaste
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:    easy access to any pastebin
 License:    GPL+ or Artistic
@@ -25,6 +25,9 @@ BuildRequires: perl(WWW::Pastebin::RafbNet::Create)
 
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+
+Obsoletes: perl-App-Nopaste
+Provides:  perl-App-Nopaste
 
 Requires: perl(MooseX::Getopt)
 
