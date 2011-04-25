@@ -66,7 +66,6 @@ rm -rf %buildroot
 %files
 %defattr(-,root,root)
 %doc Changes
-%{_mandir}/man3/*
+%{_bindir}/*
+%{_mandir}/man?/*
 %perl_vendorlib/*
-/usr/bin/nopaste
-/usr/share/man/man1/nopaste.1.lzma
