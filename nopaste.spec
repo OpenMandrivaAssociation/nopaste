@@ -3,7 +3,7 @@
 
 Name:       nopaste
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 3
 
 Summary:    easy access to any pastebin
 License:    GPL+ or Artistic
