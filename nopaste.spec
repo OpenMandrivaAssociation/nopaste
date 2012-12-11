@@ -24,9 +24,9 @@ BuildRequires: perl(Test::More)
 BuildRequires: perl(WWW::Mechanize)
 BuildRequires: perl(WWW::Pastebin::PastebinCom::Create)
 BuildRequires: perl(WWW::Pastebin::RafbNet::Create)
+BuildRequires: perl-devel
 
 BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 Obsoletes: perl-App-Nopaste
 Provides:  perl-App-Nopaste
@@ -59,14 +59,9 @@ one.
 %make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
-%clean
-rm -rf %buildroot
-
 %files
-%defattr(-,root,root)
 %doc Changes
 %{_bindir}/*
 %{_mandir}/man?/*
