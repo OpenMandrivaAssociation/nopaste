@@ -9,7 +9,7 @@ Summary:    easy access to any pastebin
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Source0:    http://www.cpan.org/modules/by-module/App/%{upstream_name}-%{upstream_version}.tar.gz
-Url:        http://search.cpan.org/dist/%{upstream_name}
+Url:        https://search.cpan.org/dist/%{upstream_name}
 
 BuildRequires: perl(Browser::Open)
 BuildRequires: perl(Clipboard)
