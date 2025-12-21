@@ -11,6 +11,7 @@ Group:      Development/Perl
 Source0:    http://www.cpan.org/modules/by-module/App/%{upstream_name}-%{upstream_version}.tar.gz
 Url:        https://search.cpan.org/dist/%{upstream_name}
 
+BuildRequires:	make
 BuildRequires: perl(Browser::Open)
 BuildRequires: perl(Clipboard)
 BuildRequires: perl(Config::INI::Reader)
