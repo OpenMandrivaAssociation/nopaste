@@ -3,8 +3,7 @@
 
 Name:       nopaste
 Version:    %{upstream_version}
-Release:    1 1
-
+Release:    1
 Summary:    easy access to any pastebin
 License:    GPL+ or Artistic
 Group:      Development/Perl
