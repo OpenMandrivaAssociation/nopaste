@@ -1,15 +1,15 @@
 %define upstream_name    App-Nopaste
-%define upstream_version 0.28
+%define upstream_version 1.013
 
 Name:       nopaste
-Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Version:    %{upstream_version}
+Release:    1 1
 
 Summary:    easy access to any pastebin
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Source0:    http://www.cpan.org/modules/by-module/App/%{upstream_name}-%{upstream_version}.tar.gz
-Url:        https://search.cpan.org/dist/%{upstream_name}
+Source0:    https://cpan.metacpan.org/authors/id/E/ET/ETHER/App-Nopaste-%{upstream_version}.tar.gz
+Url:        https://github.com/karenetheridge/App-Nopaste
 
 BuildRequires:	make
 BuildRequires: perl(Browser::Open)
