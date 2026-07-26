@@ -1,13 +1,11 @@
 %define upstream_name    App-Nopaste
-%define upstream_version 1.013
-
 Name:       nopaste
-Version:    %{upstream_version}
-Release:    1
+Version:    1.013
+Release:    2
 Summary:    easy access to any pastebin
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Source0:    https://cpan.metacpan.org/authors/id/E/ET/ETHER/App-Nopaste-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/E/ET/ETHER/App-Nopaste-%{version}.tar.gz
 Url:        https://github.com/karenetheridge/App-Nopaste
 
 BuildRequires:	make
@@ -49,7 +47,7 @@ provides redundancy: if one site doesn't work, it just tries a different
 one.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
